@@ -1,69 +1,96 @@
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesión</title>
+    <title>Inicio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-       body {
-            background-color: #0d0f36; /* Cambia el color de fondo del body a azul */
-            color: #fff; /* Cambia el color del texto a blanco */
+        body {
+            background-color: #0d0f36;
+            color: #fff;
         }
 
-        .login-container {
-            background: linear-gradient(to bottom, #69d2cd, #294380); /* Agrega un degradado azul */
-            border-radius: 15px; /* Ajusta el radio del borde según tus preferencias */
-            padding: 20px; /* Ajusta el espacio interno según tus preferencias */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Agrega una sombra si deseas */
+        .carousel-container {
+            border-radius: 15px;
+            overflow: hidden;
         }
 
-        .logo-mediano {
-            max-width: 200px;
-            height: auto;
+        .carousel-item img {
+            border-radius: 15px;
         }
     </style>
 </head>
-<body class="bg-blue">
+<body>
 
-<div class="container mt-5">
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            <div class="text-center mb-4">
-                <img src="img/logo-uta.png" alt="Logo Mediano" class="img-fluid logo-mediano">
-            </div>
-
-            <div class="login-container">
-            <div class="text-center mb-4">
-                <h3>Iniciar Sesion</h3>
-            </div>
-                <form action="" method="post">
-                    <div class="mb-3">
-                        <label for="correo" class="form-label text-white">Correo Electrónico</label>
-                        <input type="email" class="form-control" id="correo" name="correo" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="contraseña" class="form-label text-white">Contraseña</label>
-                        <input type="password" class="form-control" id="contraseña" name="contraseña" required>
-                    </div>
-                    <center>
-                        <button type="button" class="btn btn-primary" onclick="window.location.href='home.html';">Iniciar Sesión</button>
-
-</center>
-
-                </form>
-
-                <!-- Enlace para "Olvidó su contraseña?" -->
-                <div class="mt-2 text-center">
-                    <a href="olvido_contraseña.php" class="text-white">¿Olvidó su contraseña?</a>
-                </div>
-
-                <!-- Enlace para "Crear cuenta" -->
-                <div class="mt-3">
-                    <p class="text-center text-white">¿No tienes cuenta? <a href="registro.html">Crear cuenta</a></p>
-                </div>
-            </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="img/logo-uta.png" alt="Logo" height="30">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Género
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="genero/genero.php">T.S.U. en Desarrollo de Negocios Área Mercadotecnia</a></li>
+                        <li><a class="dropdown-item" href="#">Licenciatura en Innovación de Negocios y Mercadotecnia</a></li>
+                        <li><a class="dropdown-item" href="#">T.S.U. en Gastronomía</a></li>
+                        <li><a class="dropdown-item" href="#">Licenciatura en Gastronomía</a></li>
+                        <li><a class="dropdown-item" href="#">T.S.U. en Mantenimiento Industrial Área Instalaciones</a></li>
+                        <li><a class="dropdown-item" href="#">Ingeniería en Mantenimiento Industrial</a></li>
+                        <li><a class="dropdown-item" href="#">T.S.U. en Tecnologías de la Información Área Desarrollo de Software Multiplataforma</a></li>
+                        <li><a class="dropdown-item" href="#">Ingeniería en Desarrollo y Gestión de Software</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="estudiante/infest.php">Estudiante</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="consulta/consulta.html">Consulta</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="consulta/desercion.php">Deserción</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Cerrar Sesión</a>
+                </li>
+            </ul>
         </div>
+    </div>
+</nav>
+
+<div class="container mt-4">
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/imagen2.jpg" class="d-block w-100" alt="Imagen 1">
+            </div>
+            <div class="carousel-item">
+                <img src="img/UTA-CARRERA-FUTURO.jpeg" class="d-block w-100" alt="Imagen 2">
+            </div>
+            <div class="carousel-item">
+                <img src="img/Ing-De-Ges-Soft-800x445.png" class="d-block w-100" alt="Imagen 3">
+            </div>
+            <!-- Agrega más imágenes según sea necesario -->
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
 </div>
 
